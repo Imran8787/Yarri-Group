@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Section - Funny & Memories</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #e6e6fa;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #4b0082;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            background: #8a2be2;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .zoomed-image {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .zoomed-image img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5em;
+            color: #333;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .fullscreen-btn {
+            display: block;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #4b0082;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .fullscreen-btn:hover {
+            background-color: #8a2be2;
+        }
+
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #4b0082;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Photos dekhni hai ajao</h1>
+        <h2>Group Memories 📸</h2>
+        <div class="gallery">
+            <img src="yarri/p1.jpg" alt="Group Photo" onclick="zoomImage(this)">
+            <img src="yarri/p10.jpg" alt="Group Photo" onclick="zoomImage(this)">
+            <img src="yarri/p11.jpg" alt="Group Photo" onclick="zoomImage(this)">
+            <img src="yarri/p12.jpg" alt="Group Photo" onclick="zoomImage(this)">
+            <img src="yarri/p13.jpg" alt="Group Photo" onclick="zoomImage(this)">
+            <img src="yarri/p14.jpg" alt="Group Photo" onclick="zoomImage(this)">
+            <img src="yarri/p15.jpg" alt="Group Photo" onclick="zoomImage(this)">
+            <img src="yarri/p16.jpg" alt="Group Photo" onclick="zoomImage(this)">
+            <img src="yarri/p17.jpg" alt="Group Photo" onclick="zoomImage(this)">
+            <img src="yarri/p18.jpg" alt="Group Photo" onclick="zoomImage(this)">
+            <img src="yarri/p19.jpg" alt="Group Photo" onclick="zoomImage(this)">
+            <img src="yarri/p2.jpg" alt="Group Photo" onclick="zoomImage(this)">
+            <img src="yarri/p20.jpg" alt="Group Photo" onclick="zoomImage(this)">
+            <img src="yarri/p21.jpg" alt="Group Photo" onclick="zoomImage(this)">
+            <img src="yarri/p22.jpg" alt="Group Photo" onclick="zoomImage(this)">
+            <img src="yarri/p23.jpg" alt="Group Photo" onclick="zoomImage(this)">
+            <img src="yarri/p24.jpg" alt="Group Photo" onclick="zoomImage(this)">
+            <img src="yarri/p25.jpg" alt="Group Photo" onclick="zoomImage(this)">
+            <img src="yarri/p26.jpg" alt="Group Photo" onclick="zoomImage(this)">
+            <img src="yarri/p3.jpg" alt="Group Photo" onclick="zoomImage(this)">
+            <img src="yarri/p4.jpg" alt="Group Photo" onclick="zoomImage(this)">
+            <img src="yarri/p5.jpg" alt="Group Photo" onclick="zoomImage(this)">
+            <img src="yarri/p25.jpg" alt="Group Photo" onclick="zoomImage(this)">
+            <img src="yarri/p7.jpg" alt="Group Photo" onclick="zoomImage(this)">
+            <img src="yarri/p8.jpg" alt="Group Photo" onclick="zoomImage(this)">
+            <img src="yarri/p9.jpg" alt="Group Photo" onclick="zoomImage(this)">
+           
+        </div>
+
+        <a href="index.html" class="back-link">⬅ Back to Home</a>
+    </div>
+
+    <div class="zoomed-image" id="zoomedImage">
+        <button class="close-btn" onclick="closeZoom()">×</button>
+        <img id="zoomedImg" src="" alt="Zoomed Image">
+        <a href="#" class="fullscreen-btn" onclick="openFullscreen()">View Fullscreen</a>
+    </div>
+
+    <script>
+        function zoomImage(imgElement) {
+            document.getElementById("zoomedImg").src = imgElement.src;
+            document.getElementById("zoomedImage").style.display = "flex";
+        }
+        function closeZoom() {
+            document.getElementById("zoomedImage").style.display = "none";
+        }
+        function openFullscreen() {
+            var zoomedImg = document.getElementById("zoomedImg");
+            if (zoomedImg.requestFullscreen) {
+                zoomedImg.requestFullscreen();
+            } else if (zoomedImg.mozRequestFullScreen) {
+                zoomedImg.mozRequestFullScreen();
+            } else if (zoomedImg.webkitRequestFullscreen) {
+                zoomedImg.webkitRequestFullscreen();
+            } else if (zoomedImg.msRequestFullscreen) {
+                zoomedImg.msRequestFullscreen();
+            }
+        }
+    </script>
+
+</body>
+</html>

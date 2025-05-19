@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yarri Group - Home</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #000000, #ff1493);
+            margin: 0;
+            padding: 0;
+            color: white;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Slideshow - Smaller Images */
+        .slider-container {
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0px 6px 12px rgba(255, 20, 147, 0.5);
+            margin-top: 20px;
+        }
+
+        .slider {
+            display: flex;
+        }
+
+        .slide {
+            flex: 1;
+            min-width: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            max-height: 300px; /* Reduced Size */
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        /* Header */
+        #myHeader {
+            background: linear-gradient(to right, #ff1493, #000000);
+            color: white;
+            padding: 15px 30px;
+            font-size: 30px;
+            border-radius: 15px;
+            text-decoration: none;
+            transition: 0.3s;
+            display: inline-block;
+            animation: bounce 1s infinite alternate;
+        }
+
+        #myHeader:hover {
+            background: linear-gradient(to right, #000000, #ff1493);
+            transform: scale(1.05);
+        }
+
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
+        }
+
+        /* Section Layout */
+        .sections {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 40px auto;
+            max-width: 1200px;
+        }
+
+        .section {
+            background: rgba(255, 20, 147, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            width: 45%;
+            min-width: 280px;
+            box-shadow: 0px 4px 6px rgba(255, 20, 147, 0.5);
+            text-align: center;
+        }
+
+        .section h2 {
+            color: #ff69b4;
+            font-size: 22px;
+        }
+
+        .section p {
+            font-size: 16px;
+        }
+
+        /* Stylish Navigation Buttons */
+        .nav-links a {
+            display: block;
+            background: linear-gradient(to right, #ff1493, #ff69b4);
+            color: white;
+            padding: 12px 20px;
+            margin: 10px auto;
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 12px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 4px 6px rgba(255, 20, 147, 0.5);
+            width: 80%;
+            max-width: 320px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            transform: scale(1.08);
+            background: linear-gradient(to right, #ff69b4, #ff1493);
+            box-shadow: 0px 6px 12px rgba(255, 20, 147, 0.7);
+        }
+
+        h1 {
+            font-size: 26px;
+            max-width: 80%;
+            margin: auto;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        h1 span {
+            color: #ff1493;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        h1 span:hover {
+            color: #ff69b4;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Image Slideshow -->
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide"><img src="yarri c.jpg" alt="Yarri Group 1"></div>
+       
+        </div>
+    </div>
+
+    <h1>
+        <a href="cp.html" id="myHeader">💙 Let's See the Yarri Group 💙</a>
+    </h1>
+
+    <h1><b>Or Kya Hal Chal...?</b></h1>
+    <h1><b>Kaise Lage Hamare <span>Group Members</span>? 😎</b></h1>
+
+    <!-- Sections -->
+    <div class="sections">
+        <div class="section">
+            <h2>📷 Photos Dekhna Hai?</h2>
+            <a href="photo-section.html">📸 Ayiye Kuch Photos Dekh Lijiye</a>
+        </div>
+
+        <div class="section">
+            <h2>🎬 Fun Time</h2>
+            <p>Next level mazak ke liye tayar ho? 😂🔥</p>
+            <a href="prank.html">Tofa Kabul Karo 🎁</a>
+        </div>
+
+        <div class="section">
+            <h2>💡 Hamare Bare Mein Jaana Hai?</h2>
+      
+            <a href="about-us.html">📖 Sunte Toh Bahut Honge Hamare Baare Me… Ab Dekh Bhi Le! 🚀😂</a>
+        </div>
+
+        <div class="section">
+            <h2>Shayari Suna Chahoge...?</h2>
+            <p>Mast Shayari ka maja lo! 🎤</p>
+            <a href="shayri.html">Ajao Fir Soch Kya Rahe Ho..?</a>
+        </div>
+
+        <div class="section">
+            <h2>🎮 Boring Ho Rahe Ho?</h2>
+            <p>"🎮 Gaming ke deewane hi yahan click karte hain… Tum bhi try karo!" 🎯😆</p>
+            <a href="game.html">Try Karo</a>
+        </div>
+
+        <div class="section">
+            <h2>Agar website acchi lagi toh LIKE ka button dhoondh ke dabao! (Jo hai hi nahi 🤣)</h2>
+            <p>Website acchi lagi toh review zaroor do! 🤣</p>
+            <a href="visitor.html">Click karna free hai, par review dena जरूरी! 🤣📝</a>
+        </div>
+
+        <div class="section">
+            <h2>🔒 Restricted Zone</h2>
+            <p>Sirf Yarri Group Members Ke Liye!</p>
+            <a href="pas.html">🔐 Madhe ya malak, bahir kya karlalav?</a>
+        </div>
+    </div>
+
+    <h1><b>Thank you For Visiting</b></h1>
+
+    <div class="section" style="
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    background: rgba(255, 255, 255, 0.1); 
+    padding: 15px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    width: 300px; 
+    margin: 20px auto;
+">
+    <h2 style="color: #ff4b5c; font-size: 1.4em;">🔒 no entry <area shape="" coords="" href="" alt=""></h2>
+    <p style="color: white; font-size: 1em;">only for vvip!</p>
+    <a href="love-login.html" class="nav-btn" style="
+        text-decoration: none; 
+        padding: 8px 15px; 
+        background: #ff4b5c; 
+        color: white; 
+        border-radius: 5px; 
+        display: inline-block; 
+        margin-top: 8px;
+        font-size: 0.9em;
+    ">🔐 Enter</a>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Submissions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            color: black;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        textarea, input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background: #ff4b5c;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        button:hover {
+            background: #d32f2f;
+        }
+        .submission-list {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .submission-item {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Apni Baatein Share Karo, Hum Sunenge! 😜</h1>
+        <textarea id="userMessage" placeholder="Hamari website kaisi lagi bataye..."></textarea>
+        <input type="file" id="userImage" accept="image/*">
+        <button onclick="submitContent()">Submit</button>
+        <div class="submission-list" id="submissions"></div>
+    </div>
+
+    <script>
+        function submitContent() {
+            const message = document.getElementById('userMessage').value;
+            const imageInput = document.getElementById('userImage');
+            const submissions = document.getElementById('submissions');
+            
+            if (!message && !imageInput.files.length) {
+                alert('Please enter a message or upload an image!');
+                return;
+            }
+            
+            const submissionItem = document.createElement('div');
+            submissionItem.className = 'submission-item';
+            
+            if (message) {
+                const textElement = document.createElement('p');
+                textElement.innerText = message;
+                submissionItem.appendChild(textElement);
+            }
+            
+            if (imageInput.files.length) {
+                const imageElement = document.createElement('img');
+                imageElement.src = URL.createObjectURL(imageInput.files[0]);
+                imageElement.style.maxWidth = '100%';
+                imageElement.style.borderRadius = '5px';
+                imageElement.style.marginTop = '10px';
+                submissionItem.appendChild(imageElement);
+            }
+            
+            submissions.prepend(submissionItem);
+            document.getElementById('userMessage').value = '';
+            imageInput.value = '';
+        }
+    </script>
+    <button class="back-btn" onclick="goBack()">⬅️ Back</button>
+
+    <script>
+        function goBack() {
+            window.location.href = 'index.html'; // Change this to your main menu URL if needed
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudarshan Potle - Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        img {
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+
+        .business-section {
+            margin-top: 20px;
+            background: #e0f7fa;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .business-photos {
+            margin-top: 20px;
+        }
+
+        .business-photos img {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .instagram-button {
+            background: linear-gradient(to right, #f953c6, #b91d73);
+            color: white;
+        }
+
+        .whatsapp-button {
+            background: linear-gradient(to right, #25D366, #128C7E);
+            color: white;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .slider {
+            width: 100%;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .slick-slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            background: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .back-link:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sudarshan Potle</h1>
+        <img src="sudarshan.jpg" alt="Sudarshan Potle">
+        <p><b>Nickname:</b> Barkya</p>
+        <p><b>Hobbies:</b> Traveling, Farming, Business, Driving</p>
+
+        <!-- Business Details -->
+        <div class="business-section">
+            <h2>Business Details</h2>
+            <p><b>Business Name:</b> Gurubaba Spayer Parts</p>
+            <p><b>Type:</b> JCB spare parts & construction services</p>
+            <p><b>Products:</b> We sell JCB spare parts at wholesale and retail with top quality & pricing. We also offer construction, deconstruction, well work, and all JCB-related services.</p>
+            <p><b>Location:</b> Alwai, Tq Bhaalki, Dist Bidar, Karnataka</p>
+
+            <!-- Contact Buttons -->
+            <a href="https://www.instagram.com/_radhe_krishan_45/" target="_blank" class="button instagram-button">📸 Instagram</a>
+            <a href="https://wa.me/917411832122" target="_blank" class="button whatsapp-button">💬 WhatsApp</a>
+
+            <!-- Business Photos (Slider) -->
+            <div class="slider business-photos">
+                <div><img src="yarri/sudarshan 1.jpg" alt="JCB Work"></div>
+                <div><img src="yarri/sudarshan 2.jpg" alt="Spare Parts"></div>
+                <div><img src="yarri/sudarshan 3.jpg" alt="JCB in Action"></div>
+                <div><img src="yarri/sudarshan 5.jpg" alt="Well Construction"></div>
+                <div><img src="yarri/sudarshan 6.jpg" alt="JCB Machinery"></div>
+                <div><img src="yarri/sudarshan 7.jpg" alt="Worksite View"></div>
+            </div>
+        </div>
+
+        <br>
+        <a href="cp.html" class="back-link">⬅ Back to Members</a>
+    </div>
+
+    <!-- jQuery & Slick Carousel Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.slider').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+                arrows: false,
+                fade: true,
+                cssEase: 'ease-in-out'
+            });
+        });
+    </script>
+</body>
+</html>

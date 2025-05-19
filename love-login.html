@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Section Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .login-container {
+            width: 300px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            margin: 100px auto;
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .login-btn:hover {
+            background-color: #0056b3;
+        }
+        .error-message {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pyaar Ki Mehfil Mein Aane Ke Liye, Login Toh Karna Padega! 😍</h1>
+    <div class="login-container">
+        <input type="text" id="username" placeholder="Login Karo, Tabhi Mohabbat Ka Raaz Khulega! !">
+        <input type="password" id="password" placeholder="Password Yaad Nahi? Lagta Hai Pyaar Saccha Nahi! 😂">
+        <button class="login-btn" onclick="checkLogin()">इतना मत सोच, भाई! लॉगिन कर, मज़ा आएगा</button>
+        <p class="error-message" id="error-msg"></p>
+    </div>
+
+    <script defer>
+        function checkLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            var correctUsername = "yarri";
+            var correctPassword = "VIB8787";
+
+            if (username === correctUsername && password === correctPassword) {
+                sessionStorage.setItem("loggedIn", "true");
+                window.location.href = "love-section.html";
+            } else {
+                document.getElementById("error-msg").innerText = "पासवर्ड भूल गया? लगता है प्यार में धोखा खाया है!!";
+            }
+        }
+    </script>
+</body>
+</html>

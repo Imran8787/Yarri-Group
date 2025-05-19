@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Section</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            width: 250px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .links {
+            margin-top: 10px;
+        }
+        .links a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        .whatsapp {
+            background-color: green;
+        }
+        .instagram {
+            background-color: #E4405F;
+        }
+        .story-btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .story {
+            display: none;
+            font-size: 14px;
+            margin-top: 10px;
+            color: #333;
+            text-align: left;
+        }
+        .logout-btn {
+            background-color: red;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Love Section 💖</h1>
+
+    <div class="container">
+        <!-- Vaishnavi -->
+        <div class="card">
+            <img src="yarri/vvv.jpg" alt="Vaishnavi">
+            <p class="name">Vaishnavi</p>
+            <div class="links">
+                <a href="https://www.instagram.com/username" class="instagram">Instagram</a>
+            </div>
+            <button class="story-btn" onclick="toggleStory('story1')">Read Love Story</button>
+            <p id="story1" class="story">Imran and Vaishnavi’s story began in school, where they were friends from 1st to 10th grade. Their bond grew stronger over the years, and in 10th grade, they realized their feelings for each other. What followed was a beautiful relationship that lasted for 3.5 years, filled with moments of joy, sadness, and unforgettable memories.
+
+                Vaishnavi was like a queen—kind, supportive, and always there for Imran. Together, they faced every challenge, celebrated every happiness, and built a love story that felt unbreakable.
+                
+                But life had different plans. Nine months ago, Vaishnavi got married to someone else. Now, they no longer talk, but the time they spent together remains a golden chapter in Imran’s heart. No matter where life takes them, those memories will always be special. 💕</p>
+        </div>
+
+        <!-- Swati -->
+        <div class="card">
+            <img src="yarri/v1.jpg" alt="Swati">
+            <p class="name">Swati</p>
+            <div class="links">
+                <a href="https://www.instagram.com/username" class="instagram">Instagram</a>
+            </div>
+            <button class="story-btn" onclick="toggleStory('story2')">Read Love Story</button>
+            <p id="story2" class="story">Irfan and Swati’s journey began in a hospital, where fate brought them together. Swati, a dedicated nurse, and Irfan started talking casually, but soon their connection deepened into something truly special. Over time, their love grew stronger, and they shared a beautiful relationship that lasted for 5 to 6 years.
+
+                However, life took an unexpected turn—Swati got married. But even though their paths diverged, their hearts never did. They still love each other, and though they only talk sometimes, their bond remains unshaken.
+                
+                Right now, they are going through a very difficult phase due to personal reasons. Yet, despite the distance and the struggles, their love continues to exist—hidden in unspoken words, silent prayers, and memories that refuse to fade.
+                
+                . ❤️</p>
+        </div>
+
+        <!-- Mukan -->
+        <div class="card">
+            <img src="yarri/mu v.jpg" alt="Mukan">
+            <p class="name">Mukan</p>
+            <div class="links">
+                <a href="https://www.instagram.com/username" class="instagram">Instagram</a>
+            </div>
+            <button class="story-btn" onclick="toggleStory('story3')">Read Love Story</button>
+            <p id="story3" class="story">Irfan and Muskan’s love story was written in destiny long before they realized it. They were not just classmates but also neighbors—Muskan’s house stood right in front of Irfan’s. Their love blossomed naturally, spending countless moments together, sharing laughter, dreams, and a bond that everyone around them knew about.
+
+                Their relationship was no secret. They enjoyed every second together, creating memories that felt unbreakable. But life had different plans. Ten months ago, Muskan got married to another man, yet the love between them never truly faded.
+                
+                Even now, they still love each other, but they keep it hidden from the world. Their hearts speak in silence, their eyes hold the words they can’t say, and their love remains—unspoken but everlasting.
+                
+                . 🎶</p>
+        </div>
+
+        <!-- Pooja -->
+        <div class="card">
+            <img src="yarri/pooja v.jpg" alt="Pooja">
+            <p class="name">Pooja</p>
+            <div class="links">
+                <a href="https://www.instagram.com/username" class="instagram">Instagram</a>
+            </div>
+            <button class="story-btn" onclick="toggleStory('story4')">Read Love Story</button>
+            <p id="story4" class="story">Pooja and Rohan’s love story is one filled with joy, laughter, and countless memories. Though how they met remains a mystery, one thing is certain—they shared a deep bond and spent around 2 to 2.5 years together, cherishing every moment.
+
+                They enjoyed life to the fullest, creating memories filled with fun, adventure, and pure happiness. Even now, they are together, making the most of their time. But life is unpredictable, and a heartbreaking chapter is about to begin—Pooja is getting married to another man in just a few months.
+                
+                From here, their difficult days will start. A love that once knew only happiness will now face the pain of separation. Yet, no matter what happens, the time they spent together will always remain special in their hearts. 💃❤️</p>
+        </div>
+
+        <!-- Shree -->
+        <div class="card">
+            <img src="yarri/shree v.jpg" alt="Shree">
+            <p class="name">Shree</p>
+            <div class="links">
+                <a href="https://www.instagram.com/username" class="instagram">Instagram</a>
+            </div>
+            <button class="story-btn" onclick="toggleStory('story5')">Read Love Story</button>
+            <p id="story5" class="story">Satish, the senior-most friend in the group, found love in Shree. Their bond was strong, and they spent beautiful moments together, enjoying life to the fullest. They shared laughter, dreams, and a connection that felt unbreakable.
+
+                But sometimes, love doesn’t lead to forever. Due to certain reasons, they couldn’t get married, and eventually, they stopped talking to each other. Life moved on—Satish married another girl and is now happy with his family. Meanwhile, Shree is also set to get married in a few months.
+                
+                Though their paths have changed, the memories of their time together will always remain a cherished part of their journey. Some love stories don’t end in togetherness, but they are never truly forgotten.
+                
+                . 💑</p>
+        </div>
+
+        <!-- Kailas Driver -->
+        <div class="card">
+            <img src="kailas.jpg" alt="Kailas Driver">
+            <p class="name">Kailas Driver</p>
+            <div class="links">
+                <a href="https://www.instagram.com/username" class="instagram">Instagram</a>
+            </div>
+            <button class="story-btn" onclick="toggleStory('story6')">Read Love Story</button>
+            <p id="story6" class="story">Some love stories don’t need an explanation—everyone already knows them. Sudarshan and Kailas Driver’s bond is one such story. Their relationship is well-known to all, filled with unforgettable moments, laughter, and deep connection.
+
+                There’s nothing more to say—because their story speaks for itself.. 🚗💖</p>
+        </div>
+
+        <!-- tugav -->
+          <!-- Kailas Driver -->
+        <div class="card">
+            <img src="kailas.jpg" alt=" Tugav ">
+            <p class="name"> Tugav</p>
+            <div class="links">
+                <a href="https://www.instagram.com/username" class="instagram">Instagram</a>
+            </div>
+            <button class="story-btn" onclick="toggleStory('story6')">Read Love Story</button>
+            <p id="story6" class="story">Some love stories don’t need an explanation—everyone already knows them. Sudarshan and Kailas Driver’s bond is one such story. Their relationship was well-known to all, filled with unforgettable moments, laughter, and a deep connection.
+
+                But time changes everything. Now, they are no longer talking to each other. Their story, once full of joy, has now become a silent chapter in their lives.
+                
+                 🚗💖</p>
+        </div>
+    </div>
+
+    <button class="logout-btn" onclick="logout()">Logout</button>
+
+    <script>
+        function toggleStory(storyId) {
+            var story = document.getElementById(storyId);
+            if (story.style.display === "none") {
+                story.style.display = "block";
+            } else {
+                story.style.display = "none";
+            }
+        }
+
+        function logout() {
+            sessionStorage.removeItem("loggedIn");
+            window.location.href = "love_login.html";
+        }
+
+        // Redirect to login page if user is not logged in
+        if (sessionStorage.getItem("loggedIn") !== "true") {
+            window.location.href = "love_login.html";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Yarri Group</title>
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #141E30, #243B55);
+            color: white;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Container Styling */
+        .container {
+            width: 80%;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            margin-top: 50px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Heading & Paragraph Styling */
+        h1 {
+            font-size: 40px;
+            color: #ffcc00;
+            text-shadow: 0px 0px 10px rgba(255, 204, 0, 0.8);
+            animation: fadeInDown 1s ease-in-out;
+        }
+        h2 {
+            color: #ff5733;
+            text-shadow: 0px 0px 10px rgba(255, 87, 51, 0.8);
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+
+        /* Highlighted Text */
+        .highlight {
+            font-weight: bold;
+            color: #ff5733;
+            text-shadow: 0px 0px 5px rgba(255, 87, 51, 0.8);
+        }
+
+        /* Glowing Button */
+        .back-button {
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+            box-shadow: 0px 0px 15px rgba(255, 75, 43, 0.8);
+            transition: all 0.4s ease-in-out;
+        }
+
+        .back-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 25px rgba(255, 75, 43, 1);
+        }
+
+        /* Floating Effect */
+        .floating {
+            animation: float 2s infinite alternate ease-in-out;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            from { transform: translateY(0px); }
+            to { transform: translateY(-10px); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container floating">
+        <h1>🚀 About Us – The Yarri Group 🚀</h1>
+        <p><strong>🎉 Founded by:</strong> Imran Badesab (4 years ago)</p>
+        <p>The <span class="highlight">Yarri Group</span> was formed for pure fun, enjoyment, and unforgettable memories. 🎊 In these **4 years**, **nobody** has left the group—except one (*jiska naam nahi lenge! 😉*). We are **not just friends**; we are a **family** forever! ❤️🔥</p>
+        
+        <h2>🌟 Our Members 🌟</h2>
+        <p><strong>🎭 Original Members:</strong> Imran Badesab, Irfan Shaikh, Satish Talegave, Ganesh Chintalwad, Sudarshan Potle, Angad Kasar, Balaji Kumbare</p>
+        <p><strong>🔰 New Members:</strong> Rohit Bhange, Rohan Bhange</p>
+
+        <h2>💬 The Yarri Group Bond 💬</h2>
+        <p>In our group, <span class="highlight">"Privacy doesn’t exist!"</span> 😆 We share **everything**—no secrets, no barriers—just **pure trust and lifelong brotherhood!** 🤝</p>
+
+        <h2>🚀 Most Important Rule: <span class="highlight">"MONEY DOESN’T MATTER!" 💰❌</span></h2>
+        <p>**Money** never comes between our friendship! **Rich or poor, doesn’t matter**—because **Yarri Group** is all about **love & support!** 💙✨</p>
+
+        <h2>🔥 What We Believe 🔥</h2>
+        <p>The **Yarri Group** stands for **trust, respect, and unbreakable bonds**. No matter where life takes us, we **will always be connected!** 🚀💥</p>
+
+        <br>
+        <a href="index.html" class="back-button">⬅ Back to Home</a>
+    </div>
+
+</body>
+</html>
